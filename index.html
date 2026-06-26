@@ -1,0 +1,409 @@
+<!--
+Program name: index2.html
+Author: Saadet Kalayci
+Date created: 6/17/26
+Date last edited: 
+Version: 3.0
+Description: This is an online new client registration form for a dermatology office named "Skin Serenity Dermatology"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link rel="stylesheet" href="styles2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<img src="https://masterbundles.com/wp-content/uploads/2023/03/beauty-ai-491.jpg" alt="Skincare Logo">
+
+<h1> Skin Serenity Dermatology</h1>
+
+<!--
+h1 represents the name of the Dermatology clinic.
+-->
+
+<h4 id="todaysdate"></h4>
+
+<script>
+const datetext = "Today's date: ";
+const date = new Date(); 
+document.getElementById("todaysdate").innerHTML= datetext + date.toDateString();
+</script>
+
+<!--
+The dynamic date will be displayed as a <h4> 
+-->  
+
+<h2> New Client Registration Form</h2>
+
+<hr>
+
+<!--
+h2 displays a title on the page stating the purpose
+-->
+
+<title>New Client Form</title>
+ 
+
+</head>
+<body>
+
+<form id=regisform action="submit2.html">
+
+<!-- 
+The form inputs are organized in a table.
+All required fields are indicated.
+The user can see which fields are required via the placeholder attribue.
+-->
+
+<div>
+
+<h3>New Client Information</h3>
+
+<table>
+<tr>
+   <td>
+   <label for="clientid">Desired User ID: </label>
+   <input type="text" 
+ id= "clientid"
+minlength = "2" maxlength = "20" placeholder= "required" required>
+   </td>
+ </tr>
+<tr>
+   <td>
+   <label for="fname">First Name: </label>
+   <input type="text" 
+id="fname"minlength = "2" maxlength = "30" placeholder= "required" required>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="mname">Middle Initial: </label>
+   <input type="text" id="mname" maxlength = "1" >
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="lname">Last Name: </label>
+   <input type="text" id="lname" minlength = "1" maxlength = "30" placeholder= "required" required>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="dob">Date of Birth: </label>
+   <input type="date" 
+id="dob"placeholder= "MM/DD/YYY" maxlength = "10" required>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="ssn">Social Security Number: </label>
+   <input type="password" id="ssn" minlength = "9" maxlength = "9" placeholder= "required" required>
+   </td>
+ </tr>
+</table>
+</div>
+
+<hr>
+
+<!-- i put a line between each area to further separate them via <hr> -->
+
+<div>
+
+<table>
+
+<h3> Client Contact Information</h3>
+
+<tr>
+   <td>
+   <label for="email">Email Address: </label>
+   <input type="email" id="email" minlength = "10" maxlength = "30" 
+   placeholder= "required"  pattern="[a-zA-Z0-9._%+-]+@ +[a-zA-Z0-9._%+-]"required>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="phonenum">Phone Number: </label>
+   <input type="tel" id="phonenum" minlengh = "10' maxlength= "15" placeholder="999-999-9999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+ </tr>
+
+</table>
+</div>
+
+<hr>
+
+<div>
+
+<h3>Mailing Address</h3>
+
+<table>
+<tr>
+   <td>
+   <label for="addr1">Address Line 1: </label>
+   <input type="text" id="addr1" minlength="5"maxlength = "50" placeholder= "required"required>
+   </td>
+    </tr>
+ <tr>
+   <td>
+   <label for="addr2">Address Line 2: </label>
+   <input type="text" id="addr2" maxlength = "50">
+   </td>
+
+ </tr> 
+ <tr>
+   <td>
+   <label for="city">City: </label>
+   <input type="text" id="city" minlength="2" maxlength = "30" placeholder= "required" required>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="state">State:</label>
+    <select id="state" name="state" required>
+        <option value="">Select a State</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+    </select>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="zipcode">Zip Code: </label>
+   <input type="text" id="zipcode" minlength="5" maxlength = "10" placeholder= "required" required>
+   </td>
+ </tr>
+
+</table>
+</div>
+
+<hr>
+
+<div>
+
+<h3>Patient Information</h3>
+<table>
+<tr>
+   <td>
+   <label for="skinconcern">Describe your skin concerns and symptoms: </label>
+<br>
+<textarea id="skinconcern" name="skinconcern" rows="3" cols="50" maxlength= "200" placeholder="Enter symptoms here" required></textarea>
+</td>
+</tr>
+
+<!--
+The user is asked to state their skin concerns in a text area.
+-->
+
+ <tr>
+   <td>
+   <label for= "allergy"> Do you have allergies to any of the listed?:</label>
+<br>
+   <label for="allergy1">Latex</label>
+   <input type="checkbox" id="allergy1" name="allergy1" value="Latex">
+<br>
+    <label for="allergy2">Penicillin</label>
+   <input type="checkbox" id="allergy2" name="allergy2" value="Penicillin">
+<br>
+    <label for="allergy3">Fragrances</label>
+   <input type="checkbox" id="allergy3" name="allergy3" value="Fragrances">
+<br>
+    <label for="allergy4">Adhesives/Bandages</lable>
+   <input type="checkbox" id="allergy4" name="allergy4" value="Adhesives/Bandages">
+<br>
+    <lable for="allergy5">Topical Antibiotics</label>
+   <input type="checkbox" id="allergy5" name="allergy5" value="Topical Antibiotics">
+<br>
+   <label for= "allergy6">None</label>
+   <input type="checkbox" id="allergy6" name="allergy6" value="None">
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="pregnant">Are you pregnant?</label>
+   <input type="radio" id="yes" name= "pregnant" value="yes" required>
+   <label for="yes">Yes</label>
+   <input type="radio" id="no" name="pregnant" value="no" required>
+   <label for= "no">No</label>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="insurance">Do you have insurance?</label>
+   <input type="radio" id="yes" value="yes" required>
+   <label for="yes">Yes</label>
+   <input type= "radio" id="no" value="no"required>
+   <label for= "no"> No </label>
+   </td>
+ </tr>
+ <tr>
+   <td>
+   <label for="smoking">Do you smoke?</label>
+   <input type="radio" id="yes" value="yes" required>
+   <label for="yes">Yes</label>
+   <input type= "radio" id="no" value="no" required>
+   <label for= "no"> No </label>
+   </td>
+ </tr>
+ <tr>
+   <td>
+    <label for="skinrating">Rate how sensitive your skin is from less sensitive to very sensitive:</label>
+   <input type="range" id="skinrating" min="Calm" max="Very Sensitive" required>
+   </td>
+ </tr> 
+<tr>
+  <td>
+   <label for="freq">How often do you experience flare-ups?</label>
+   <input type="range" id="frequency" name="frequency" min="0" max="100" required>
+
+   <span id="freqdisplay">0</span>
+<!--
+I used javascript to put in a slidebar that asks the user how often they get flare ups
+-->
+
+   <script>
+  var slidebar = document.getElementById("frequency");
+  var flareups = document.getElementById("freqdisplay");
+  flareups.innerHTML = slidebar.value; 
+  slidebar.oninput = function() {
+  flareups.innerHTML = this.value;
+}
+   </script>
+
+  </td>
+</tr>
+ <tr>
+    <td> 
+     <input type="submit" value="Submit" id="submit">
+     <input type="reset" value="Reset">
+     <input type="button" onclick="validate()" value="Review Information">
+
+
+<!--To make the "review" button i tried to use javascript by creating a new function called "validate" to display the inputted data to the user. I got very confused at this part and couldn't get it right, so I researched online how to code these types of pop-up windows
+-->
+
+<script>
+function validate() {
+ let clientid= document.getElementById("clientid").value;
+ let fname= document.getElementById("fname").value;
+ let mname= document.getElementById("mname").value;
+ let lname= document.getElementById("lname").value;
+ let dob= document.getElementById("dob").value;
+ let ssn= document.getElementById("ssn").value;
+ let email= document.getElementById("email").value;
+ let phonenum= document.getElementById("phonenum").value;
+ let addr1= document.getElementById("addr1").value;
+ let addr2= document.getElementById("addr2").value;
+ let city= document.getElementById("city").value;
+ let state= document.getElementById("state").value;
+ let zipcode= document.getElementById("zipcode").value;
+ let skinconcern= document.getElementById("skinconcern").value;
+
+<!-- so far until here i did it myself by looking at w3schools, but i used AI to help me understand how to syntax input types such as radio buttons and slide bars. 
+I then used the window.confirm() method i learned from w3schools
+-->
+
+ let allergies= [];
+if(document.getElementById("allergy1").checked)allergies.push("Latex");
+if(document.getElementById("allergy2").checked)allergies.push("Penicillin");
+if(document.getElementById("allergy3").checked)allergies.push("Fragrances");
+if(document.getElementById("allergy4").checked)allergies.push("Adhesives/Bandages");
+if(document.getElementById("allergy5").checked)allergies.push("Topical Antibiotics");
+if(document.getElementById("allergy6").checked)allergies.push("None");
+let pregnant=document.querySelector('input[name="pregnant"]:checked')?.value || "Not selected";
+ let insurance =
+document.querySelector('input[name="insurance"]:checked')?.value || "Not selected";
+
+let smoking =
+document.querySelector('input[name="smoking"]:checked')?.value || "Not selected";
+ let skinrating= document.getElementById("skinrating").value;
+ let frequency= document.getElementById("frequency").value;
+ 
+  let popup =
+"Please review your information:\n" +
+"Client ID: " + clientid + "\n" +
+"First Name: " + fname + "\n" +
+"Middle Initial: " + mname + "\n" +
+"Last Name: " + lname + "\n" +
+"Date of Birth: " + dob + "\n" +
+"SSN: " + ssn + "\n" +
+"Email: " + email + "\n" +
+"Phone: " + phonenum + "\n" +
+"Address 1: " + addr1 + "\n" +
+"Address 2: " + addr2 + "\n" +
+"City: " + city + "\n" +
+"State: " + state + "\n" +
+"Zip Code: " + zipcode + "\n" +
+"Skin Concern: " + skinconcern + "\n" +
+"Allergies: " + allergies.join(", ") + "\n" +
+"Pregnant: " + pregnant + "\n" +
+"Insurance: " + insurance + "\n" +
+"Smoking: " + smoking + "\n" +
+"Skin Sensitivity: " + skinrating + "\n" +
+"Flare-up Rating: " + frequency;
+
+window.confirm(popup)
+}
+
+</script>
+<!-- 
+when the user clicks the submit button the code will ensure all required fields are full and in the required format.
+The page will then show a screen saying "Your Form has been submitted!" and "Thank You!"
+-->
+
+   </td>
+ </tr>
+
+</table>
+</div>
+<hr>
+</body>
+</html>
